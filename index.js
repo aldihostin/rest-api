@@ -76,6 +76,24 @@ app.get('/api/degreeguru', async (req, res) => {
   }
 });
 
+// Endpoint untuk TikTok Search
+app.get('/api/tiktoks', async (req, res) => {
+  try {
+    const { message }= req.query;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await ptz.tiktoks(message);
+    res.status(200).json({
+      status: 200,
+      creator: "KyuuRzy",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Endpoint untuk Gemini
 app.get('/api/gemini', async (req, res) => {
   try {

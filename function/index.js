@@ -5,5 +5,6 @@ module.exports = {
 	degreeGuru: require('./scraper/degreeGuru'),
 	geminii: require('./scraper/gemini'),
 	tiktoks: require('./scraper/tiktoks'),
-	chat: require('./scraper/gpt4')
+	chat: require('./scraper/gpt4'),
+	imgToPrompt: require('./lib/scraper/ImageToPrompt')
 }

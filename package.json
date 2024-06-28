@@ -15,6 +15,7 @@
     "cors": "^2.8.5",
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.19.2",
+    "g4f": "^1.4.3",
     "node-fetch": "^2.6.7",
     "ssl-express-www": "^3.2.1"
   }
